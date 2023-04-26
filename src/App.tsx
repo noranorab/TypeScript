@@ -8,6 +8,8 @@ import { Oscar } from './components/Oscar';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
 import { Container } from './components/Container';
+import { ThemeContextProvider} from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 function App() {
   const personName = {
     first : 'Noura',
@@ -33,7 +35,8 @@ function App() {
 
     return (
     <div className="App">
-      <Container styles={{border: '1px solid black'}}/>
+      <ThemeContextProvider><Box/></ThemeContextProvider>
+      {/* <Container styles={{border: '1px solid black'}}/> */}
       {/* <Button handleClick={(event, id)=> console.log("button clicked", event, id)}/>
       <Input value='' handleChange={(event) => console.log(event)} /> */}
       {/* <Heading>Placeholder text</Heading>
